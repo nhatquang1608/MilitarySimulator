@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bfcd0808581f141baf5b32ae0d2238, type: 3}
+  m_Name: PlayerInfo
+  m_EditorClassIdentifier: 
+  id: 1
+  position: {x: -10.69, y: 18.12584, z: -17.736}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  mainWeaponId: 1
+  isUsedMainWeapon: 1
+  isUsedGrenade: 0
+  totalBullet: 60
+  presentBullet: 30
+  remainBullet: 30
+  totalGrenade: 1
+  maxHealth: 10000
+  presentHealth: 8905
+  totalBandages: 1
+  totalFirstAidKit: 1
+  totalAdrenaline: 1
