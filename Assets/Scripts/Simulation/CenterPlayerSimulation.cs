@@ -63,7 +63,7 @@ public class CenterPlayerSimulation : MonoBehaviour
     {
         playerController.ThrowGrenade();
 
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(25f);
 
         StartCoroutine(CrouchToProne());
     }

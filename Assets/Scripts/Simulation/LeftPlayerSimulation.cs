@@ -45,19 +45,38 @@ public class LeftPlayerSimulation : MonoBehaviour
 
     private void OnPlaceExplosive(Transform grenade)
     {
-        StartCoroutine(WalkToPoint2Crouch());
+        StartCoroutine(CrouchToStand0());
     }
 
-    private IEnumerator WalkToPoint2Crouch()
+    private IEnumerator CrouchToStand0()
     {
-        playerController.WalkToPointCrouch(targetPoint2.position);
+        playerController.CrouchToStand();
+
+        yield return new WaitForSeconds(1.233f);
+
+        StartCoroutine(RunToPoint2());
+    }
+
+    private IEnumerator RunToPoint2()
+    {
+        playerController.RunToPointStand(targetPoint2.position);
 
         while(playerController.waiting)
         {
             yield return null;
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
+
+        playerController.RotateToTarget(bunker);
+        StartCoroutine(StandToCrouch0());
+    }
+
+    private IEnumerator StandToCrouch0()
+    {
+        playerController.StandToCrouch();
+
+        yield return new WaitForSeconds(3.933f);
 
         StartCoroutine(PlaceExplosive());
     }
